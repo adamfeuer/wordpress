@@ -63,6 +63,10 @@ else
   end
 end
 
+file "#{node['wordpress']['dir']}/index.html" do
+  action :delete
+end
+
 directory "#{node['wordpress']['dir']}" do
   owner "root"
   group "root"
